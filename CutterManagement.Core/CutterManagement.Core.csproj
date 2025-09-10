@@ -1,0 +1,19 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <RuntimeIdentifier>win-x64</RuntimeIdentifier>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <Platforms>x64;x86</Platforms>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Include="DataModel\.Base\DataModelBase.cs" />
+    <Compile Include="Validation\.Base\DataValidationBase.cs" />
+    <Compile Include="Validation\.Base\DataValidationService.cs" />
+    <Compile Include="Validation\.Base\IValidator.cs" />
+    <Compile Include="Validation\.Base\ValidationResult.cs" />
+  </ItemGroup>
+
+</Project>
