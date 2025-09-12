@@ -239,6 +239,7 @@ namespace CutterManagement.DataAccess
         /// generates database if it hasn't been created yet
         /// </summary>
         /// <returns><see cref="Task"/></returns>
+        [Obsolete("Not in use")]
         public async Task UpdateDatabaseMigrateAsync()
         {
             try
