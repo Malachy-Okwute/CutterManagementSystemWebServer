@@ -93,15 +93,15 @@
             });
         }
 
-        //public static void MapGetWithNavPropertiesByIdEndpoint<T, TProperty>(this WebApplication app, string endPoint) where T : class where TProperty : class
-        //{
-        //    app.MapGet($"{endPoint}/{{id}}/with-nav", async (IServiceProvider serviceProvider, int id) =>
-        //    {
-        //        var factory = serviceProvider.GetRequiredService<IDataAccessServiceFactory>();
-        //        var table = factory.GetDbTable<T>();
-        //        var entity = await table.GetEntityWithCollectionsByIdAsync(id, e => (ICollection<TProperty>)typeof(T).GetProperty(typeof(TProperty).Name)!.GetValue(e)!);
-        //        return entity is not null ? Results.Ok(entity) : Results.NotFound();
-        //    });
-        //}
+        public static void MapGetWithNavPropertiesByIdEndpoint<T, TProperty>(this WebApplication app, string endPoint) where T : class where TProperty : class
+        {
+            //app.MapGet($"{endPoint}/{{id}}/with-nav", async (IServiceProvider serviceProvider, int id, [FromBody] T entity) =>
+            //{
+            //    var factory = serviceProvider.GetRequiredService<IDataAccessServiceFactory>();
+            //    var table = factory.GetDbTable<T>();
+            //    var entity = await table.GetEntityWithCollectionsByIdAsync(id, p => );
+            //    return entity is not null ? Results.Ok(entity) : Results.NotFound();
+            //});
+        }
     }
 }

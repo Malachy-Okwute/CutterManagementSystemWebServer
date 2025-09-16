@@ -23,7 +23,7 @@ builder.Services.AddSwaggerGen();
 var app = builder.Build();
 
 // Get application database context
-var db = app.Services.GetRequiredService<ApplicationDbContext>();
+var db = app.Services.CreateScope().ServiceProvider.GetRequiredService<ApplicationDbContext>();
 
 // Apply any pending migration to database or generate a new database if it hasn't been created yet
 await db.Database.MigrateAsync();
