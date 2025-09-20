@@ -15,7 +15,7 @@
             app.MapPutEndpoint<UserDataModel>("UserDataModel");
             app.MapDeleteEndpoint<UserDataModel>("UserDataModel");
             app.MapGetByIdEndpoint<UserDataModel>("UserDataModel");
-            app.MapGetWithNavPropertiesByIdEndpoint<UserDataModel, object>("UserDataModel");
+            //app.MapGetWithNavPropertiesByIdEndpoint<UserDataModel>("UserDataModel");
         }
 
         /// <summary>
@@ -28,7 +28,7 @@
             app.MapPutEndpoint<CutterDataModel>("CutterDataModel");
             app.MapDeleteEndpoint<CutterDataModel>("CutterDataModel");
             app.MapGetByIdEndpoint<CutterDataModel>("CutterDataModel");
-            app.MapGetWithNavPropertiesByIdEndpoint<CutterDataModel, object>("CutterDataModel");
+            //app.MapGetWithNavPropertiesByIdEndpoint<CutterDataModel>("CutterDataModel");
         }
 
         /// <summary>
@@ -41,7 +41,7 @@
             app.MapPutEndpoint<MachineDataModel>("MachineDataModel");
             app.MapDeleteEndpoint<MachineDataModel>("MachineDataModel");
             app.MapGetByIdEndpoint<MachineDataModel>("MachineDataModel");
-            app.MapGetWithNavPropertiesByIdEndpoint<MachineDataModel, object>("MachineDataModel");
+            //app.MapGetWithNavPropertiesByIdEndpoint<MachineDataModel>("MachineDataModel");
         }
 
         /// <summary>
@@ -54,7 +54,7 @@
             app.MapPutEndpoint<UserDataArchive>("UserDataArchive");
             app.MapDeleteEndpoint<UserDataArchive>("UserDataArchive");
             app.MapGetByIdEndpoint<UserDataArchive>("UserDataArchive");
-            app.MapGetWithNavPropertiesByIdEndpoint<UserDataArchive, object>("UserDataArchive");
+            //app.MapGetWithNavPropertiesByIdEndpoint<UserDataArchive>("UserDataArchive");
         }
 
         /// <summary>
@@ -67,7 +67,7 @@
             app.MapPutEndpoint<PartDataModel>("PartDataModel");
             app.MapDeleteEndpoint<PartDataModel>("PartDataModel");
             app.MapGetByIdEndpoint<PartDataModel>("PartDataModel");
-            app.MapGetWithNavPropertiesByIdEndpoint<PartDataModel, object>("PartDataModel");
+            //app.MapGetWithNavPropertiesByIdEndpoint<PartDataModel>("PartDataModel");
         }
 
         /// <summary>
@@ -80,7 +80,7 @@
             app.MapPutEndpoint<CMMDataModel>("CMMDataModel");
             app.MapDeleteEndpoint<CMMDataModel>("CMMDataModel");
             app.MapGetByIdEndpoint<CMMDataModel>("CMMDataModel");
-            app.MapGetWithNavPropertiesByIdEndpoint<CMMDataModel, object>("CMMDataModel");
+            //app.MapGetWithNavPropertiesByIdEndpoint<CMMDataModel>("CMMDataModel");
         }
 
         /// <summary>
@@ -93,7 +93,7 @@
             app.MapPutEndpoint<InfoUpdateDataModel>("InfoUpdateDataModel");
             app.MapDeleteEndpoint<InfoUpdateDataModel>("InfoUpdateDataModel");
             app.MapGetByIdEndpoint<InfoUpdateDataModel>("InfoUpdateDataModel");
-            app.MapGetWithNavPropertiesByIdEndpoint<InfoUpdateDataModel, object>("InfoUpdateDataModel");
+            //app.MapGetWithNavPropertiesByIdEndpoint<InfoUpdateDataModel>("InfoUpdateDataModel");
         }
 
         /// <summary>
@@ -106,7 +106,7 @@
             app.MapPutEndpoint<ProductionPartsLogDataModel>("ProductionPartsLogDataModel");
             app.MapDeleteEndpoint<ProductionPartsLogDataModel>("ProductionPartsLogDataModel");
             app.MapGetByIdEndpoint<ProductionPartsLogDataModel>("ProductionPartsLogDataModel");
-            app.MapGetWithNavPropertiesByIdEndpoint<ProductionPartsLogDataModel, object>("ProductionPartsLogDataModel");
+            //app.MapGetWithNavPropertiesByIdEndpoint<ProductionPartsLogDataModel>("ProductionPartsLogDataModel");
         }
 
         /// <summary>
@@ -119,7 +119,7 @@
             app.MapPutEndpoint<ProductionPartsLogDataArchive>("ProductionPartsLogDataArchive");
             app.MapDeleteEndpoint<ProductionPartsLogDataArchive>("ProductionPartsLogDataArchive");
             app.MapGetByIdEndpoint<ProductionPartsLogDataArchive>("ProductionPartsLogDataArchive");
-            app.MapGetWithNavPropertiesByIdEndpoint<ProductionPartsLogDataArchive, object>("ProductionPartsLogDataArchive");
+            //app.MapGetWithNavPropertiesByIdEndpoint<ProductionPartsLogDataArchive>("ProductionPartsLogDataArchive");
         }
 
     }

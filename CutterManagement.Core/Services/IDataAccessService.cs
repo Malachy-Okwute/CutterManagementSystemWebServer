@@ -29,10 +29,9 @@ namespace CutterManagement.Core
         /// Get an entity by id
         /// </summary>
         /// <param name="entityId">The id of the entity to get</param>
-        /// <param name="navProperty">Expression used to get the navigation properties</param>
         /// <returns><see cref="Task"/> of <see cref="T"/></returns>
         //Task<T?> GetEntityByIdAsync(int? entityId);
-        Task<T?> GetEntityByIdAsync(int? entityId, Expression<Func<T, DataModelBase>>? navProperty = null) ;
+        Task<T?> GetEntityByIdAsync(int? entityId);
 
         /// <summary>
         /// Gets an entity including it's navigation properties
@@ -41,7 +40,7 @@ namespace CutterManagement.Core
         /// <param name="entityId">The main entity id to get</param>
         /// <param name="includeExpression">Expression used to get the navigation properties</param>
         /// <returns><see cref="Task{T}"/> of <see cref="T"/></returns>
-        Task<T> GetEntityWithCollectionsByIdAsync<TProperty>(int entityId, Expression<Func<T, ICollection<TProperty>>> includeExpression) where TProperty : class;
+        //Task<T> GetEntityByIdIncludingNavigationPropertyAsync<TEntity>(int entityId, params Expression<Func<T, object>>[] includes) where TEntity : class;
 
         /// <summary>
         /// Update an entity

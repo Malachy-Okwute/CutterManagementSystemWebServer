@@ -1,4 +1,6 @@
-﻿namespace CutterManagement.Web.Server
+﻿using System.Linq.Expressions;
+
+namespace CutterManagement.Web.Server
 {
     /// <summary>
     /// An extension class for <see cref="WebApplication"/>
@@ -93,13 +95,13 @@
             });
         }
 
-        public static void MapGetWithNavPropertiesByIdEndpoint<T, TProperty>(this WebApplication app, string endPoint) where T : class where TProperty : class
+        public static void MapGetWithNavPropertiesByIdEndpoint<T>(this WebApplication app, string endPoint, params Expression<Func<T, object>>[] query) where T : class 
         {
-            //app.MapGet($"{endPoint}/{{id}}/with-nav", async (IServiceProvider serviceProvider, int id, [FromBody] T entity) =>
+            //app.MapGet($"{endPoint}/{{id}}/with-nav", async (IServiceProvider serviceProvider, int id) =>
             //{
             //    var factory = serviceProvider.GetRequiredService<IDataAccessServiceFactory>();
             //    var table = factory.GetDbTable<T>();
-            //    var entity = await table.GetEntityWithCollectionsByIdAsync(id, p => );
+            //    var entity = await table.GetEntityByIdIncludingNavigationPropertyAsync<T>(id, query);
             //    return entity is not null ? Results.Ok(entity) : Results.NotFound();
             //});
         }

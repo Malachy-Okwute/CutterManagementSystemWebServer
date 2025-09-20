@@ -56,4 +56,6 @@ app.UseHttpsRedirection();
 
 app.ConfigureApiEndpoint();
 
+app.MapGet("CutterManagement.Web.Server", () => "Cutter Management Web Server is running...");
+
 app.Run();

@@ -4,6 +4,7 @@ using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
 using System.Diagnostics;
 using System.Linq.Expressions;
+using System.Reflection;
 using System.Transactions;
 
 namespace CutterManagement.DataAccess
@@ -94,19 +95,13 @@ namespace CutterManagement.DataAccess
         /// Get an entity by id
         /// </summary>
         /// <param name="entityId">The id of the entity to get</param>
-        /// <param name="navProperty">Expression used to get the navigation properties</param>
         /// <returns><see cref="Task{T}"/> of <see cref="T"/></returns>
-        public async Task<T?> GetEntityByIdAsync(int? entityId, Expression<Func<T, DataModelBase>>? navProperty = null) 
+        public async Task<T?> GetEntityByIdAsync(int? entityId) 
         {
             // Check if the entityId is null
             if (entityId is null)
             {
                 return null;
-            }
-            // Check if the navigation property is requested    
-            if (navProperty is not null)
-            {
-                return await _dbTable.Include(navProperty).FirstOrDefaultAsync(entity => EF.Property<int>(entity, "Id") == entityId);
             }
 
             // Return the entity by id without navigation properties
@@ -114,16 +109,23 @@ namespace CutterManagement.DataAccess
         }
 
         /// <summary>
-        /// Gets an entity including it's navigation properties
+        /// Gets an entity including specified navigation property
         /// </summary>
         /// <typeparam name="TProperty">The navigation property</typeparam>
         /// <param name="entityId">The main entity id to get</param>
         /// <param name="includeExpression">Expression used to get the navigation properties</param>
         /// <returns><see cref="Task{T}"/> of <see cref="T"/></returns>
-        public async Task<T> GetEntityWithCollectionsByIdAsync<TProperty>(int entityId, Expression<Func<T, ICollection<TProperty>>> includeExpression) where TProperty : class
-        {
-            return await _dbTable.Include(includeExpression).FirstAsync(entity => EF.Property<int>(entity, "Id") == entityId);
-        }
+        //public async Task<T> GetEntityByIdIncludingNavigationPropertyAsync<TEntity>(int entityId, params Expression<Func<T, object>>[] includes) where TEntity : class
+        //{
+        //    IQueryable<T> query = _dbTable;
+
+        //    foreach (var include in includes)
+        //    {
+        //        query = query.Include(include);
+        //    }
+
+        //    return await query.FirstOrDefaultAsync(entity => EF.Property<int>(entity, "Id") == entityId);
+        //}
 
         /// <summary>
         /// Update an entity
